@@ -35,9 +35,7 @@ class Fib extends Component {
   };
 
   renderSeenIndexes() {
-    let a = []
-    let i = typeof(this.state.seenIndexes) == typeof(a) ? this.state.seenIndexes.map(( number ) => number).join(', ') : this.setState({seenIndexes: a});
-    return i;
+    return this.state.seenIndexes.map(({ number }) => number).join(', ');
   }
 
   renderValues() {
